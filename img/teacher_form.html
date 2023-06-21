@@ -1,0 +1,157 @@
+<?php
+	session_start();
+	if($_SESSION['user'] == "")
+	{
+		echo "Please Login!";
+		exit();
+	}
+
+	if($_SESSION['status'] != "teacher")
+	{
+		echo "This page for tercher only!";
+		exit();
+	}
+
+
+	$link = mysqli_connect("localhost","root");M
+	mysqli_set_charset($link,'utf8');
+	mysqli_query($link, "use userdb;");
+	$sql = "Select * from usertbl where user = '".$_SESSION["user"]."' && password = '".$_SESSION["pass"]."'";
+	$result = mysqli_query($link, $sql);
+	$dbarr = mysqli_fetch_array($result);
+	$sql2 = "Select class from class where class like '".$dbarr["class"]."%_'";
+	$result2 = mysqli_query($link, $sql2);
+
+
+
+?>
+<html>
+<head>
+<style type='text/css'>
+body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+html {
+			background: url("ppt-backgrounds-2340383_960_720.png") no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;}
+h2{
+	font-size: 20px;
+}
+h1{
+	font-family: Impact;
+	color: #FF6347;
+}
+.submit{
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+		font-weight: 900;
+}
+.submit{
+	background-color: #99FFCC;
+    color: black;
+    border: none;
+}
+.submit:hover{
+	background-color: #00CC33;
+    color: white;
+}
+.reset{
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+	font-weight: 900;
+}
+.reset{
+	background-color: #BEBEBE;
+    color: black;
+    border: none;
+}
+.reset:hover{
+	background-color:#FF3333 ;
+    color: white;
+		border: none;
+}
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #66CDAA;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+</style>
+</head>
+<title>Teacherform</title>
+
+<body>
+	<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+	<hr width="100%"  size="20" color="#B22222" align="top"><p>
+	<h1><center><font size="10">  S&nbsp;E&nbsp;N&nbsp;D&nbsp;<BR>H&nbsp;O&nbsp;M&nbsp;
+		E&nbsp;W&nbsp;O&nbsp;R&nbsp;K&nbsp;&nbsp;&nbsp;F&nbsp;O&nbsp;R&nbsp;M</font></center></h1>
+
+	<?php echo "คุณครู ".$dbarr["name"]." ระดับชั้นมัธยมศึกษาปีที่ ".$dbarr["class"];?><p>
+<form method="post" action="add_work.php">
+	<div name="ส่งไปที่" > <p style="text-indent: 375">ส่งไปที่</p>  </div><p style="text-indent: 375"><select name="class"></p>
+	<?php
+		while($dbarr2 = mysqli_fetch_array($result2))
+	{
+		echo "<option value=$dbarr2[class]>$dbarr2[class]</option>";
+	}
+	?>
+	</select><p>
+	<p style="text-indent: 375">หัวข้อ</p> <p style="text-indent: 375"><input type="text" name="title"><p></p>
+
+<p style="text-indent: 375">รายละเอียด</p>
+<center><p><textarea name="detail" rows="9" cols="80" ></textarea><p>
+	</center>
+<center>
+	<br><br>
+	<input type="submit" name="submit" value="มอบหมายงาน" class= "submit">&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="reset" name="reset" value="ยกเลิก" class="reset" > </center>
+	<p>
+</form>
+		<hr width="100%"  size="35" color="#B22222"  ALIGN="bottom"><p>
+
+</body>
+</html>

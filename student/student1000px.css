@@ -1,0 +1,156 @@
+<style type='text/css'>
+body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+html {
+	background: url("/project/img/ppt-backgrounds-2340383_960_720.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;}
+	#header{
+		height:50px;
+	}
+	h1{
+		font-family: Mitr Light;
+		font-size: 50px;
+	}
+	#content{ position:center;
+	}
+	.accordion {
+		font-size: 20px;
+		font-family: Mitr Light;
+		background-color: white;
+		color: black;
+		cursor: pointer;
+		padding: 7px;
+		width: 100%;
+		border: none;
+		text-align: left;
+		outline: none;
+		transition: 0.4s;
+
+	}
+
+	.active,.accordion:hover {
+		background-color: #4CAF50;
+	}
+
+	.accordion:after {
+		content: '\002B';
+		color: #777;
+		font-weight: bold;
+		float: right;
+		margin-left: 5px;
+
+	}
+
+	.active:after {
+		content: "\2212";
+	}
+
+	.panel {
+		border:13px solid #D3D3D3;
+		font-size: 16px;
+		padding: 0 18px;
+		background-color: white;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+	}
+}
+body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+html {
+	background: url("/project/img/ppt-backgrounds-2340383_960_720.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;}
+	#header{
+		height:50px;
+
+	}
+
+	#content{ position:center;
+	}
+	.ปุ่ม{
+		height: auto;
+		width: 100%;
+		font-family: Mitr Light;
+	}
+	.กรอบของปุ่ม{
+		height: 40%;
+		width: 50%;
+		background-color: white;
+		box-shadow: 5px 5px 10px 10px rgba(30,30,30,.1);
+	}
+	.แถบเมณู{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color:#B22222 ;
+		transition: 0.4s;
+
+	}
+
+
+	.เมณู {
+		float: left;
+		font-family: Mitr Light;
+		transition: 0.4s;
+	}
+
+	.เมณู a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		transition: 0.4s;
+	}
+
+	.เมณู a:hover:not(.active) {
+		background-color: #111;
+	}
+
+
+	.อักษรใน{
+		font-size: 13px;
+	}
+	.nameclass{
+		font-size: 20px;
+		font-family: Mitr Light;
+		font-weight: 1000;
+	}
+.line1{
+	 border-top: 1px solid #D3D3D3;
+	  border-bottom: 1px solid #D3D3D3;
+}
+.bg{
+	background-color:#F8F8FF ;
+}
+.ผูแจง{
+	font-size: 13px;
+}
+
+#ชือผูแจง{
+  margin-top: 3%;
+	float:left;
+ color: #4682B4;
+    text-align:center;
+		font-weight: 1000;
+}
+#คอมเมน{
+margin-top: 3%;
+	float:left;
+	margin-left: 3%;
+	 text-align:center;
+}
+textarea{
+	border-radius: 10px;
+}
+.picture{
+	width: 80%;}
+
+</style>

@@ -1,0 +1,210 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 2.5% 2.5%;
+    margin: 2% 0;
+    display: inline-block;
+    border: 3% solid #ccc;
+    box-sizing: border-box;
+}
+button {
+     border-radius: 10px;
+    background-color: #d30dc6;
+    color: white;
+    padding: 1.1% 1.5%;
+    margin: 1% 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-family: Mitr Light;
+}
+.pom{
+    font-size: 1.5em;
+    color: #e75f3c;
+    background-color: white;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 1% 3%;
+    background-color: #f44336;
+}
+.imgcontainer {
+    text-align: center;
+    margin: 2% 0 3% 0;
+    position: relative;
+
+}
+
+img.avatar {
+    width: 20%;
+
+}
+
+.container {
+    padding: 4%;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.modal-content {
+    background: white;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    height: auto;
+    width: 80%; /* Could be more or less, depending on screen size */
+
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+span.psw {
+   display: block;
+   float: none;
+}
+.cancelbtn {
+   width: 100%;
+}
+img.avatar {
+    width: 50px;
+    margin-top: 4px;
+  }
+  h1{
+    display: none;
+    padding-top: 0;
+    margin-bottom: 2%;
+    font-family: Prestige Elite Std;
+    color:white;
+    font-size: 55px;
+    font-weight: 10;
+  }
+  #header{
+    width: 100%;
+    height: auto;
+    background: #e75f3c;
+    padding-bottom: 0;
+    font-family: Mitr Light;
+  }
+.logo{
+  height: auto;
+  font-size: 25px;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 2%;
+  overflow: hidden;
+}
+.textcenter{
+    height: auto;
+      font-size: 20px;
+      font-family: Mitr Light;
+      color:#3D4A4B;
+      padding-top: 6%;
+      padding-left: 10%;
+      margin-bottom: 0;
+    }
+    .computer{
+      display: none;
+      width: 500px;
+      height: auto;
+      margin-right: 7%;
+    }
+    .headertext{
+      font-size: 45px;
+      color: white;
+    }
+    #content{
+      width: 100%;
+      height: auto;
+      margin-bottom: 0;
+    }
+    .compic{
+      width: 95%;
+      margin-top: 6%;
+    }
+    img.compicin{
+      width: 100%;
+      height: 42%;
+    }
+    .mySlides{
+      width: 100%;
+    }
+    .textfoot{
+              width: 100%;
+              height: auto;
+                font-size: 22px;
+                font-family: Mitr Light;
+                color:#3D4A4B;
+                padding-top: 0%;
+                margin-top: 14%;
+    }
+    a:link, a:visited {
+        background-color: #e75f3c;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+
+    a:hover, a:active {
+        background-color: 	#FF9966;
+    }
+    .pom2{
+      background-color: #d30dc6;
+    }
+    .Slides{
+      display: none;
+    }
+.textin{
+  font-size: 15px;
+  font-family: Impact;
+}
